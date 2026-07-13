@@ -5,287 +5,229 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Golden Hearth is a warm, modern restaurant serving seasonal comfort food with a welcoming atmosphere."
+      content="Golden Hearth is a warm, modern restaurant offering thoughtful plates, inviting evenings, and memorable hospitality."
     />
-    <title>Golden Hearth | Restaurant</title>
+    <title>Golden Hearth | Modern Dining</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <!-- The header stays visible at the top and links to each major section -->
     <header class="site-header">
       <div class="container nav-bar">
         <a class="logo" href="#home">Golden Hearth</a>
         <nav class="site-nav" aria-label="Main navigation">
-          <a href="#about">About</a>
+          <a href="#story">Story</a>
           <a href="#menu">Menu</a>
           <a href="#gallery">Gallery</a>
-          <a href="#testimonials">Testimonials</a>
+          <a href="#testimonials">Reviews</a>
           <a href="#contact">Contact</a>
         </nav>
       </div>
     </header>
 
     <main id="main-content">
-      <!-- The hero section introduces the restaurant and invites visitors to explore -->
+      <!-- The hero section gives the page a bold first impression and introduces the restaurant experience -->
       <section class="hero" id="home">
-        <div class="container hero-content">
+        <div class="container hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">Farm-to-table dining</p>
-            <h1>Seasonal comfort in every plate.</h1>
+            <p class="eyebrow">Seasonal supper club</p>
+            <h1>Warm plates, candlelit evenings, and a room full of stories.</h1>
             <p>
-              Welcome to Golden Hearth, where cozy hospitality meets handcrafted
-              dishes, rich flavors, and a welcoming table for every occasion.
+              Discover an intimate dining experience where comfort food is elevated with thoughtful ingredients, cozy service, and a polished atmosphere.
             </p>
-            <a class="btn btn-primary" href="#menu">View Our Menu</a>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#menu">Explore the Menu</a>
+              <a class="btn btn-secondary" href="#contact">Book a Table</a>
+            </div>
+            <ul class="hero-highlights">
+              <li>Open nightly from 5pm</li>
+              <li>Chef’s tasting menu</li>
+              <li>Private dining available</li>
+            </ul>
           </div>
-          <div class="hero-image">
+
+          <div class="hero-visual">
             <img
-              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80"
-              alt="A cozy restaurant dining room with warm lighting"
+              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=80"
+              alt="An elegant restaurant dining room with warm lighting"
             />
           </div>
         </div>
       </section>
 
-      <!-- The about section uses flexbox to place text beside an image -->
-      <section class="about" id="about">
-        <div class="container about-content">
-          <div class="about-image">
-            <img
-              src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=80"
-              alt="Chef preparing a plated dish in a restaurant kitchen"
-            />
-          </div>
-          <div class="about-text">
-            <p class="eyebrow">Our Story</p>
-            <h2>Inspired by tradition and shared meals.</h2>
+      <!-- This section uses a two-column layout to balance story content with a feature panel -->
+      <section class="story-section" id="story">
+        <div class="container story-grid">
+          <article class="story-card">
+            <p class="eyebrow">Our philosophy</p>
+            <h2>Crafted for lingering conversations.</h2>
             <p>
-              Golden Hearth began as a neighborhood gathering place fueled by
-              family recipes and a love for generous hospitality. Today, we serve
-              thoughtful dishes made with local ingredients and polished with
-              care.
+              Golden Hearth began as a neighborhood gathering place and grew into a destination known for generous hospitality, refined comfort, and meals made to be shared.
             </p>
             <p>
-              Every visit is designed to feel like a warm welcome home, whether
-              you are stopping in for lunch or celebrating a special dinner.
+              Every plate is designed to feel familiar yet elevated, giving guests the warmth of home with the polish of a memorable evening out.
             </p>
+          </article>
+
+          <div class="feature-panel">
+            <article class="feature-block">
+              <h3>Tonight’s special</h3>
+              <p>Roasted heritage chicken with wild mushroom jus and charred citrus.</p>
+            </article>
+            <article class="feature-block">
+              <h3>Signature service</h3>
+              <p>From first greeting to final pour, every detail is handled with calm care.</p>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- The menu section showcases featured dishes as cards -->
+      <!-- The menu section is presented as a featured dish plus a compact card grid -->
       <section class="menu" id="menu">
         <div class="container">
           <div class="section-heading">
-            <p class="eyebrow">Signature Menu</p>
-            <h2>Favorites crafted with heart.</h2>
-            <p>
-              Browse a few of our most-loved dishes, each made fresh and served
-              with a touch of comfort.
-            </p>
+            <p class="eyebrow">Menu highlights</p>
+            <h2>A taste of the house.</h2>
+            <p>Choose from comforting classics and seasonal favorites prepared with intention.</p>
           </div>
 
-          <div class="menu-grid">
-            <article class="menu-card">
+          <div class="menu-layout">
+            <article class="menu-feature">
               <img
-                src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=80"
-                alt="Creamy mushroom pasta on a rustic plate"
+                src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=1000&q=80"
+                alt="A plated pasta dish with rich sauce and herbs"
               />
-              <div class="menu-card-content">
-                <h3>Truffle Mushroom Pasta</h3>
-                <p>Silky pasta with roasted mushrooms and a rich truffle cream.</p>
-                <p class="price">$18</p>
+              <div class="menu-feature-content">
+                <p class="eyebrow">Chef’s favorite</p>
+                <h3>Truffle Mushroom Tagliatelle</h3>
+                <p>Silky pasta, roasted mushrooms, and a glossy finish of herb butter.</p>
+                <span>$24</span>
               </div>
             </article>
 
-            <article class="menu-card">
-              <img
-                src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80"
-                alt="Grilled steak served with vegetables"
-              />
-              <div class="menu-card-content">
-                <h3>Herb Grill Steak</h3>
-                <p>Juicy grilled steak with herb butter and seasonal sides.</p>
-                <p class="price">$24</p>
-              </div>
-            </article>
-
-            <article class="menu-card">
-              <img
-                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80"
-                alt="Fresh salad with roasted vegetables and greens"
-              />
-              <div class="menu-card-content">
+            <div class="menu-list">
+              <article class="menu-card">
                 <h3>Garden Harvest Bowl</h3>
-                <p>Fresh greens, roasted vegetables, and citrus dressing.</p>
-                <p class="price">$15</p>
-              </div>
-            </article>
-
-            <article class="menu-card">
-              <img
-                src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=800&q=80"
-                alt="A warm breakfast plate with eggs and toast"
-              />
-              <div class="menu-card-content">
+                <p>Fresh greens, roasted vegetables, citrus dressing.</p>
+                <span>$16</span>
+              </article>
+              <article class="menu-card">
+                <h3>Herb Grill Steak</h3>
+                <p>Juicy steak with seasonal sides and house butter.</p>
+                <span>$28</span>
+              </article>
+              <article class="menu-card">
                 <h3>Morning Brunch Plate</h3>
-                <p>Eggs, sourdough toast, and house preserves with fresh herbs.</p>
-                <p class="price">$14</p>
-              </div>
-            </article>
-
-            <article class="menu-card">
-              <img
-                src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80"
-                alt="Crispy chicken sandwich with lettuce and sauce"
-              />
-              <div class="menu-card-content">
+                <p>Eggs, sourdough, preserves, and roasted tomatoes.</p>
+                <span>$15</span>
+              </article>
+              <article class="menu-card">
                 <h3>Golden Chicken Sandwich</h3>
-                <p>Crisp fried chicken with pickles, slaw, and house sauce.</p>
-                <p class="price">$16</p>
-              </div>
-            </article>
-
-            <article class="menu-card">
-              <img
-                src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=800&q=80"
-                alt="A glossy dessert with caramel and berries"
-              />
-              <div class="menu-card-content">
+                <p>Crispy chicken, pickles, slaw, and signature sauce.</p>
+                <span>$18</span>
+              </article>
+              <article class="menu-card">
                 <h3>Caramel Berry Tart</h3>
-                <p>Buttery tart with caramel glaze and a burst of fresh berries.</p>
-                <p class="price">$9</p>
-              </div>
-            </article>
+                <p>Buttery tart with caramel glaze and fresh berries.</p>
+                <span>$11</span>
+              </article>
+              <article class="menu-card">
+                <h3>Wild Mushroom Risotto</h3>
+                <p>Creamy arborio rice with roasted mushrooms and herbs.</p>
+                <span>$22</span>
+              </article>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- This gallery uses a horizontal scroll area to mimic a carousel without JavaScript -->
+      <!-- The gallery section is designed as a more immersive showcase of meals and atmosphere -->
       <section class="gallery" id="gallery">
-        <div class="container">
-          <div class="section-heading">
+        <div class="container gallery-shell">
+          <div class="gallery-intro">
             <p class="eyebrow">Gallery</p>
-            <h2>Moments from the table.</h2>
-            <p>
-              A simple, scrollable gallery highlights the food and atmosphere
-              that make Golden Hearth memorable.
-            </p>
+            <h2>Every plate tells a story.</h2>
+            <p>A glimpse into the meals, moods, and warm details that define the Golden Hearth experience.</p>
           </div>
 
-          <div class="gallery-track" aria-label="Food gallery">
-            <figure class="gallery-item">
+          <div class="gallery-grid">
+            <figure class="gallery-card gallery-card-large">
               <img
-                src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=800&q=80"
-                alt="A plated pasta dish served on a wooden table"
+                src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1000&q=80"
+                alt="A beautifully plated pasta dish on a wooden dining table"
               />
               <figcaption>Signature pasta nights</figcaption>
             </figure>
-            <figure class="gallery-item">
+            <figure class="gallery-card">
               <img
-                src="https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=800&q=80"
-                alt="A breakfast spread with fresh pastries and coffee"
+                src="https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=900&q=80"
+                alt="A brunch setup with pastries and coffee"
               />
               <figcaption>Weekend brunch service</figcaption>
             </figure>
-            <figure class="gallery-item">
+            <figure class="gallery-card">
               <img
-                src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=800&q=80"
-                alt="A cozy dessert served with berries and cream"
+                src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=900&q=80"
+                alt="A dessert plated with berries and cream"
               />
-              <figcaption>Sweet finishes every night</figcaption>
+              <figcaption>Sweet finishes</figcaption>
             </figure>
           </div>
         </div>
       </section>
 
-      <!-- Testimonials are arranged as cards with flexbox for easy alignment -->
+      <!-- Testimonials are arranged as warm, simple cards to keep the layout friendly and human -->
       <section class="testimonials" id="testimonials">
         <div class="container">
           <div class="section-heading">
-            <p class="eyebrow">Reviews</p>
-            <h2>What guests are saying.</h2>
-            <p>
-              Visitors return for the food, the comfort, and the friendly service.
-            </p>
+            <p class="eyebrow">Guest notes</p>
+            <h2>What people love most.</h2>
+            <p>Comforting food, thoughtful service, and a space that makes evening plans feel easy.</p>
           </div>
 
           <div class="testimonial-grid">
             <article class="testimonial-card">
-              <div class="testimonial-head">
-                <img
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80"
-                  alt="Portrait of a happy restaurant guest"
-                />
-                <div>
-                  <h3>Maya R.</h3>
-                  <p>Regular guest</p>
-                </div>
+              <p>“The room feels intimate and inviting, and every course felt beautifully considered.”</p>
+              <div class="testimonial-person">
+                <strong>Maya R.</strong>
+                <span>★★★★★</span>
               </div>
-              <p>“Every dish feels thoughtful and comforting. The atmosphere is lovely.”</p>
-              <p class="stars" aria-label="Five star rating">★★★★★</p>
             </article>
-
             <article class="testimonial-card">
-              <div class="testimonial-head">
-                <img
-                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80"
-                  alt="Portrait of a restaurant guest smiling"
-                />
-                <div>
-                  <h3>Daniel P.</h3>
-                  <p>Birthday dinner</p>
-                </div>
+              <p>“The service was warm and polished, and the steak was exceptional.”</p>
+              <div class="testimonial-person">
+                <strong>Daniel P.</strong>
+                <span>★★★★★</span>
               </div>
-              <p>“The service was warm and the steak was cooked perfectly. Highly recommended.”</p>
-              <p class="stars" aria-label="Five star rating">★★★★★</p>
             </article>
-
             <article class="testimonial-card">
-              <div class="testimonial-head">
-                <img
-                  src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80"
-                  alt="Portrait of a guest enjoying dinner"
-                />
-                <div>
-                  <h3>Sophia T.</h3>
-                  <p>Weekend brunch</p>
-                </div>
+              <p>“A perfect date-night spot with a relaxed atmosphere and wonderful flavors.”</p>
+              <div class="testimonial-person">
+                <strong>Sophia T.</strong>
+                <span>★★★★★</span>
               </div>
-              <p>“The brunch plate and coffee were both excellent. A perfect slow morning.”</p>
-              <p class="stars" aria-label="Five star rating">★★★★★</p>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- The contact section combines key information with a simple form -->
+      <!-- The contact section combines location details with a more refined reservation form -->
       <section class="contact" id="contact">
-        <div class="container contact-grid">
+        <div class="container contact-shell">
           <div class="contact-info">
-            <p class="eyebrow">Visit Us</p>
+            <p class="eyebrow">Reserve a table</p>
             <h2>We would love to welcome you.</h2>
-            <p>
-              Stop by for lunch, dinner, or a cozy coffee break. We are always
-              happy to hear from guests.
-            </p>
+            <p>Join us for dinner, brunch, or a quiet drink after work.</p>
             <ul class="contact-list">
               <li><strong>Address:</strong> 118 Hearth Street, Portland, ME</li>
               <li><strong>Phone:</strong> (207) 555-0148</li>
               <li><strong>Email:</strong> hello@goldenhearth.com</li>
-              <li><strong>Hours:</strong> Mon-Thu 11am-9pm, Fri-Sun 10am-10pm</li>
+              <li><strong>Hours:</strong> Mon–Thu 5pm–9pm, Fri–Sun 10am–10pm</li>
             </ul>
           </div>
 
-          <form class="contact-form exotic-form">
-            <div class="form-intro">
-              <p class="eyebrow">Reserve a Table</p>
-              <h3>Let the evening begin.</h3>
-              <p>Share your details and we will gladly prepare a warm welcome for your visit.</p>
-            </div>
-
+          <form class="contact-form">
             <label for="name">Name</label>
             <input id="name" name="name" type="text" placeholder="Your name" />
 
@@ -301,17 +243,16 @@
       </section>
     </main>
 
-    <!-- The footer closes the page with useful links and copyright -->
     <footer class="site-footer">
-      <div class="container footer-content">
+      <div class="container footer-grid">
         <div>
           <a class="logo footer-logo" href="#home">Golden Hearth</a>
           <p>Warm flavors, thoughtful service, and a welcoming table.</p>
         </div>
         <div>
-          <h3>Quick Links</h3>
+          <h3>Quick links</h3>
           <ul class="footer-links">
-            <li><a href="#about">About</a></li>
+            <li><a href="#story">Story</a></li>
             <li><a href="#menu">Menu</a></li>
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#contact">Contact</a></li>
