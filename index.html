@@ -16,7 +16,12 @@
     <header class="site-header">
       <div class="container nav-bar">
         <a class="logo" href="#home">JasonK's Cuisine</a>
-        <nav class="site-nav" aria-label="Main navigation">
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="site-nav" id="siteNav" aria-label="Main navigation">
           <a href="#story">Story</a>
           <a href="#menu">Menu</a>
           <a href="#gallery">Gallery</a>
@@ -92,6 +97,12 @@
             <p>Choose from comforting classics and seasonal favorites prepared with intention.</p>
           </div>
 
+          <div class="menu-filters" id="menuFilters" role="group" aria-label="Filter menu by price">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="under20">Under $20</button>
+            <button class="filter-btn" data-filter="over20">$20 & Up</button>
+          </div>
+
           <div class="menu-layout">
             <article class="menu-feature">
               <img
@@ -106,39 +117,40 @@
               </div>
             </article>
 
-            <div class="menu-list">
-              <article class="menu-card">
+            <div class="menu-list" id="menuList">
+              <article class="menu-card" data-price="16">
                 <h3>Garden Harvest Bowl</h3>
                 <p>Fresh greens, roasted vegetables, citrus dressing.</p>
                 <span>$16</span>
               </article>
-              <article class="menu-card">
+              <article class="menu-card" data-price="28">
                 <h3>Herb Grill Steak</h3>
                 <p>Juicy steak with seasonal sides and house butter.</p>
                 <span>$28</span>
               </article>
-              <article class="menu-card">
+              <article class="menu-card" data-price="15">
                 <h3>Morning Brunch Plate</h3>
                 <p>Eggs, sourdough, preserves, and roasted tomatoes.</p>
                 <span>$15</span>
               </article>
-              <article class="menu-card">
+              <article class="menu-card" data-price="18">
                 <h3>Golden Chicken Sandwich</h3>
                 <p>Crispy chicken, pickles, slaw, and signature sauce.</p>
                 <span>$18</span>
               </article>
-              <article class="menu-card">
+              <article class="menu-card" data-price="11">
                 <h3>Caramel Berry Tart</h3>
                 <p>Buttery tart with caramel glaze and fresh berries.</p>
                 <span>$11</span>
               </article>
-              <article class="menu-card">
+              <article class="menu-card" data-price="22">
                 <h3>Wild Mushroom Risotto</h3>
                 <p>Creamy arborio rice with roasted mushrooms and herbs.</p>
                 <span>$22</span>
               </article>
             </div>
           </div>
+          <p class="menu-empty" id="menuEmpty" hidden>No dishes match this filter right now.</p>
         </div>
       </section>
 
@@ -151,11 +163,12 @@
             <p>A glimpse into the meals, moods, and warm details that define the Golden Hearth experience.</p>
           </div>
 
-          <div class="gallery-grid">
+          <div class="gallery-grid" id="galleryGrid">
             <figure class="gallery-card gallery-card-large">
               <img
                 src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1000&q=80"
                 alt="A beautifully plated pasta dish on a wooden dining table"
+                tabindex="0"
               />
               <figcaption>Signature pasta nights</figcaption>
             </figure>
@@ -163,6 +176,7 @@
               <img
                 src="https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=900&q=80"
                 alt="A brunch setup with pastries and coffee"
+                tabindex="0"
               />
               <figcaption>Weekend brunch service</figcaption>
             </figure>
@@ -170,12 +184,22 @@
               <img
                 src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=900&q=80"
                 alt="A dessert plated with berries and cream"
+                tabindex="0"
               />
               <figcaption>Sweet finishes</figcaption>
             </figure>
           </div>
         </div>
       </section>
+
+      <div class="lightbox" id="lightbox" hidden>
+        <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+        <div class="lightbox-content">
+          <button class="lightbox-close" id="lightboxClose" aria-label="Close image">&times;</button>
+          <img id="lightboxImg" src="" alt="" />
+          <p id="lightboxCaption"></p>
+        </div>
+      </div>
 
       <!-- Testimonials are arranged as warm, simple cards to keep the layout friendly and human -->
       <section class="testimonials" id="testimonials">
@@ -227,17 +251,21 @@
             </ul>
           </div>
 
-          <form class="contact-form">
+          <form class="contact-form" id="contactForm" novalidate>
             <label for="name">Name</label>
             <input id="name" name="name" type="text" placeholder="Your name" />
+            <span class="field-error" id="nameError"></span>
 
             <label for="email">Email</label>
             <input id="email" name="email" type="email" placeholder="you@example.com" />
+            <span class="field-error" id="emailError"></span>
 
             <label for="message">Message</label>
             <textarea id="message" name="message" placeholder="Tell us about your visit."></textarea>
+            <span class="field-error" id="messageError"></span>
 
             <button class="btn btn-primary" type="submit">Reserve My Spot</button>
+            <p class="form-status" id="formStatus" role="status" hidden></p>
           </form>
         </div>
       </section>
@@ -269,5 +297,7 @@
       </div>
       <p class="copyright">© 2026 JasonK's Cuisine. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
